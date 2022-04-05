@@ -3,8 +3,11 @@ import 'dart:convert';
 
 import 'package:http/http.dart';
 
+import '../models/employee_delete.dart';
 import '../models/employee_list.dart';
 import '../models/employee_one.dart';
+import '../models/employee_create.dart';
+import '../models/employee_update.dart';
 import '../models/user_model.dart';
 
 class Network {
@@ -110,5 +113,25 @@ class Network {
     var data = EmpOne.fromJson(json);
     return data;
   }
+
+  static EmpCreate parseEmpCreate(String body){
+    dynamic json = jsonDecode(body);
+    var data = EmpCreate.fromJson(json);
+    return data;
+  }
+
+  static EmpUpdate parseEmpUpdate(String body){
+    dynamic json = jsonDecode(body);
+    var data = EmpUpdate.fromJson(json);
+    return data;
+  }
+
+  static EmpDel parseEmpDel(String body){
+    dynamic json = jsonDecode(body);
+    var data = EmpDel.fromJson(json);
+    return data;
+  }
+
+
 
 }

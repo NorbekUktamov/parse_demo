@@ -21,7 +21,6 @@ class MyApp extends StatelessWidget {
       home: HomePage(),
       routes: {
         HomePage.id: (context) =>HomePage(),
-        DetailPage.id: (context) =>DetailPage(),
       },
     );
   }

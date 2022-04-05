@@ -7,6 +7,8 @@ import '../models/employee_model.dart';
 import '../services/http_service.dart';
 
 class HomePage extends StatefulWidget {
+
+
   static final String id = "home_page";
 
   @override
@@ -47,6 +49,7 @@ class _HomePageState extends State<HomePage> {
     _apiEmpList();
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,8 +67,13 @@ class _HomePageState extends State<HomePage> {
 
   Widget itemOfList(Employee emp) {
     return GestureDetector(
-      onTap: (){
-        Navigator.pushNamed(context, DetailPage.id);
+      onTap: () {
+
+        var route = new MaterialPageRoute(
+          builder: (BuildContext context) =>
+           DetailPage(emp: emp,),
+        );
+        Navigator.of(context).push(route);
       },
       child:  Container(
         padding: EdgeInsets.all(20),
