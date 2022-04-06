@@ -16,29 +16,6 @@ class DetailPage extends StatefulWidget {
 
 class _DetailPageState extends State<DetailPage> {
 
-
-
-
-  // void _showResponse(String response) {
-  //   if (response != null) {
-  //     EmpOne empone = Network.parseEmpOne(response);
-  //     setState(() {
-  //       _apiEmpOne(emp.id);
-  //     });
-  //   } else {
-  //     print("Try again");
-  //   }
-  // }
-
-  // void _apiEmpOne(int id) {
-  //   Network.GET(Network.API_EMP_ONE + id.toString(), Network.paramsEmpty())
-  //       .then((response) => {
-  //     print(response),
-  //     _showResponse(response),
-  //   });
-  // }
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -33,7 +33,7 @@ class Network {
     print(api);
     var uri = Uri.http(BASE, api, params);
     var response = await get(uri, headers: headers);
-    if (response.statusCode == 200) {
+    if (response.statusCode == 200 || response.statusCode ==201 ) {
       return response.body;
     }else {
       return "null";
